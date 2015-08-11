@@ -1,0 +1,25 @@
+<h1> posts yooooooooo </h1>
+
+
+<ul>
+<% myPosts.forEach(function(post){ %>
+  <li>
+  <%= post.title %> -
+  <%= post.content %> -
+  </li>
+
+ <% }) %>
+ </ul>
+
+ <form method="post" action="/posts">
+  <select name="author">
+    <% authorList.forEach(function(author){ %>
+      <option value="<%= author.id %>">
+        <%= author.name %>
+      </option>
+    <% }) %>
+  </select><br><Br>
+  <input type="text" placeholder="title" name="title"><br><br>
+  <textarea name="content"></textarea><br><br>
+  <input type="submit" value="Save">
+</form>
